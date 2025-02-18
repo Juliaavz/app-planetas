@@ -54,9 +54,6 @@ class ControlePlaneta {
 
   Future<int> excluirPlaneta(int id) async {
     final db = await bd;
-    return await db.delete(
-      'planetas', 
-      where: 'id = ?', 
-      whereArgs: [id]);
+    return await db.delete('planetas', where: 'id = ?', whereArgs: [id]);
   }
 }
